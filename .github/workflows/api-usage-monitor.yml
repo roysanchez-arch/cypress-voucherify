@@ -24,7 +24,7 @@ jobs:
         run: npm ci
 
       - name: Run Cypress
-        run: npx cypress run --spec "e2e/pago-callapi.cy.ts --browser chrome"
+        run: npx cypress run --spec "cypress/e2e/pago-callapi.cy.ts" --browser chrome
         env:
           CYPRESS_USER_LOGIN: ${{ secrets.CYPRESS_USER_LOGIN }}
           CYPRESS_PASS_LOGIN: ${{ secrets.CYPRESS_PASS_LOGIN }}
