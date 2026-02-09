@@ -5,7 +5,8 @@ dotenv.config();
 
 export default defineConfig({
   e2e: {
-    supportFile: 'cypress/support/e2e.ts'
+    supportFile: 'cypress/support/e2e.ts',
+    browser: 'chrome'
   },
   env: {
       SLACK_WEBHOOK_URL: process.env.CYPRESS_SLACK_WEBHOOK_URL,

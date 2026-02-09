@@ -9,7 +9,7 @@ jobs:
   cypress-monitor:
     runs-on: ubuntu-latest
 
-    environment: production   
+    environment: produccion
 
     steps:
       - name: Checkout repo
@@ -24,7 +24,7 @@ jobs:
         run: npm ci
 
       - name: Run Cypress
-        run: npx cypress run
+        run: npx cypress run --spec "cypress/e2e/pago-callapi.cy.ts --browser chrome"
         env:
           CYPRESS_USER_LOGIN: ${{ secrets.CYPRESS_USER_LOGIN }}
           CYPRESS_PASS_LOGIN: ${{ secrets.CYPRESS_PASS_LOGIN }}
