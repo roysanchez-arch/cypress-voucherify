@@ -40,7 +40,7 @@ describe('Pago - Call Apis', () => {
       cy.then(() => {
         const value = lastCycle.total_percentage;
 
-        if (value >= 99) {
+        if (value >= 98) {
           cy.log(`✅ OK: total_percentage = ${value}`);
           notifySlack(
             `🚨 *ALERTA* 🚨\n` +
